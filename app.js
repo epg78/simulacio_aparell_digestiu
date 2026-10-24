@@ -106,7 +106,7 @@ let sessionQuestions = [];
 let lastSessionSignature = "";
 
 const quizQuestions = [
-  { type: "identify", organ: "boca", question: "Assenyala a la imatge l’entrada del sistema digestiu." },
+  { type: "identify", organ: "boca", question: "Assenyala a la imatge l’entrada de l’aparell digestiu." },
   { type: "choice", question: "Quina és la funció principal de les dents?", options: ["Absorbir nutrients", "Tallar i triturar els aliments", "Produir bilis", "Emmagatzemar la femta"], answer: 1 },
   { type: "choice", question: "Quin enzim de la saliva inicia la digestió del midó?", options: ["La pepsina", "L’amilasa", "La insulina", "El glucagó"], answer: 1 },
   { type: "identify", organ: "glandules-salivals", question: "Assenyala les glàndules que produeixen la saliva." },
@@ -128,7 +128,7 @@ const quizQuestions = [
   { type: "choice", question: "Quina afirmació sobre l’apèndix és correcta?", options: ["Produeix la bilis", "Conté teixit relacionat amb el sistema immunitari", "És on s’absorbeixen la majoria dels nutrients", "És l’obertura final del tub digestiu"], answer: 1 },
   { type: "identify", organ: "recte", question: "Assenyala el tram on s’emmagatzema temporalment la femta abans de l’expulsió." },
   { type: "choice", question: "Per on s’expulsa la femta a l’exterior?", options: ["Per la faringe", "Per l’esòfag", "Per l’anus", "Per la vesícula biliar"], answer: 2 },
-  { type: "choice", question: "Quins òrgans del sistema digestiu funcionen com a glàndules annexes?", options: ["El fetge, el pàncrees i les glàndules salivals", "L’esòfag, el recte i l’anus", "Les dents, la faringe i l’estómac", "L’intestí prim i l’intestí gros"], answer: 0 },
+  { type: "choice", question: "Quins òrgans de l’aparell digestiu funcionen com a glàndules annexes?", options: ["El fetge, el pàncrees i les glàndules salivals", "L’esòfag, el recte i l’anus", "Les dents, la faringe i l’estómac", "L’intestí prim i l’intestí gros"], answer: 0 },
   { type: "choice", question: "On es troba principalment la microbiota intestinal?", options: ["A l’intestí gros", "A la boca", "A l’esòfag", "A la vesícula biliar"], answer: 0 },
   { type: "identify", organ: "faringe", question: "Assenyala el conducte que participa en la deglució i comunica la boca amb l’esòfag." },
   { type: "identify", organ: "vesicula-biliar", question: "Assenyala el petit sac que emmagatzema la bilis sota el fetge." },
@@ -240,7 +240,7 @@ function clearPreview() {
   else {
     highlights.forEach((highlight) => highlight.classList.remove("is-active", "is-selected"));
     panelStatus.textContent = "Exploració guiada";
-    panelContent.innerHTML = `<p class="panel-kicker">SISTEMA DIGESTIU</p><h2>Tria una part del dibuix</h2><p>Quan seleccionis un òrgan, aquí hi trobaràs el seu nom, una descripció i la seva funció principal.</p>`;
+    panelContent.innerHTML = `<p class="panel-kicker">APARELL DIGESTIU</p><h2>Tria una part del dibuix</h2><p>Quan seleccionis un òrgan, aquí hi trobaràs el seu nom, una descripció i la seva funció principal.</p>`;
   }
 }
 
