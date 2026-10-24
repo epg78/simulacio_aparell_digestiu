@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Explora el sistema digestiu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">LABORATORI VIRTUAL</p>
+          <h1>Explora el sistema digestiu</h1>
+          <p class="subtitle">Passa per sobre dels òrgans i selecciona’n un per conèixer-ne la funció.</p>
+        </div>
+        <div class="header-mark" aria-hidden="true">BIO</div>
+      </header>
+
+      <nav class="app-nav" aria-label="Navegació de l’aplicació">
+        <button class="nav-button active" id="exploreButton" type="button">Explora el sistema digestiu</button>
+        <button class="nav-button" id="quizButton" type="button">Posa’t a prova</button>
+      </nav>
+
+      <section class="workspace" aria-label="Explorador del sistema digestiu">
+        <div class="illustration-card">
+          <div class="illustration-heading">
+            <h2>Selecciona un òrgan</h2>
+            <p>Les zones s’activen quan hi passes per sobre.</p>
+          </div>
+          <div class="body-map" id="bodyMap">
+            <div class="digestive-layers" role="img" aria-label="Il·lustració del sistema digestiu humà">
+              <img class="digestive-layer layer-background" src="imatges/Arxius%20de%20capen%20PNG/Fondo.png" alt="" />
+              <img class="organ-highlight" data-highlight="boca" src="imatges/Arxius%20de%20capen%20PNG/Boca.png" alt="" style="left:38.54%;top:12.76%;width:9.11%;height:4.69%" />
+              <img class="organ-highlight" data-highlight="dents" src="imatges/Arxius%20de%20capen%20PNG/Dents.png" alt="" style="left:39.45%;top:13.28%;width:1.56%;height:3.65%" />
+              <img class="organ-highlight" data-highlight="glandules-salivals" src="imatges/Arxius%20de%20capen%20PNG/Gl%C3%A0ndules%20salivals.png" alt="" style="left:41.80%;top:10.16%;width:11.98%;height:11.07%" />
+              <img class="organ-highlight" data-highlight="faringe" src="imatges/Arxius%20de%20capen%20PNG/Faringe.png" alt="" style="left:47.53%;top:13.67%;width:5.21%;height:9.90%" />
+              <img class="organ-highlight" data-highlight="esofag" src="imatges/Arxius%20de%20capen%20PNG/Es%C3%B2fag.png" alt="" style="left:48.31%;top:22.01%;width:6.25%;height:19.79%" />
+              <img class="organ-highlight" data-highlight="estomac" src="imatges/Arxius%20de%20capen%20PNG/Est%C3%B3mac.png" alt="" style="left:42.06%;top:40.23%;width:20.83%;height:18.75%" />
+              <img class="organ-highlight" data-highlight="fetge" src="imatges/Arxius%20de%20capen%20PNG/Fetge.png" alt="" style="left:33.72%;top:40.23%;width:23.96%;height:16.93%" />
+              <img class="organ-highlight" data-highlight="vesicula-biliar" src="imatges/Arxius%20de%20capen%20PNG/Ves%C3%ADcula%20biliar.png" alt="" style="left:38.41%;top:50.13%;width:5.47%;height:5.47%" />
+              <img class="organ-highlight" data-highlight="pancrees" src="imatges/Arxius%20de%20capen%20PNG/P%C3%A0ncrees.png" alt="" style="left:44.40%;top:52.73%;width:17.71%;height:8.59%" />
+              <img class="organ-highlight" data-highlight="intesti-prim" src="imatges/Arxius%20de%20capen%20PNG/Intest%C3%AD%20prim.png" alt="" style="left:39.19%;top:53.78%;width:22.40%;height:27.86%" />
+              <img class="organ-highlight" data-highlight="intesti-gros" src="imatges/Arxius%20de%20capen%20PNG/Intest%C3%AD%20gros.png" alt="" style="left:33.72%;top:54.82%;width:32.81%;height:39.84%" />
+              <img class="organ-highlight" data-highlight="apendix" src="imatges/Arxius%20de%20capen%20PNG/App%C3%A8ndix.png" alt="" style="left:39.97%;top:80.99%;width:2.34%;height:4.04%" />
+              <img class="organ-highlight" data-highlight="recte" src="imatges/Arxius%20de%20capen%20PNG/Recte.png" alt="" style="left:46.99%;top:79.04%;width:16.93%;height:15.63%" />
+              <img class="organ-highlight" data-highlight="anus" src="imatges/Arxius%20de%20capen%20PNG/Anus.png" alt="" style="left:48.05%;top:91.54%;width:3.91%;height:3.13%" />
+            </div>
+            <button class="hotspot hotspot-mouth" data-organ="boca" aria-label="Selecciona la boca"></button>
+            <button class="hotspot hotspot-teeth" data-organ="dents" aria-label="Selecciona les dents"></button>
+            <button class="hotspot hotspot-salivary" data-organ="glandules-salivals" aria-label="Selecciona les glàndules salivals"></button>
+            <button class="hotspot hotspot-pharynx" data-organ="faringe" aria-label="Selecciona la faringe"></button>
+            <button class="hotspot hotspot-esophagus" data-organ="esofag" aria-label="Selecciona l’esòfag"></button>
+            <button class="hotspot hotspot-stomach" data-organ="estomac" aria-label="Selecciona l’estómac"></button>
+            <button class="hotspot hotspot-liver" data-organ="fetge" aria-label="Selecciona el fetge"></button>
+            <button class="hotspot hotspot-gallbladder" data-organ="vesicula-biliar" aria-label="Selecciona la vesícula biliar"></button>
+            <button class="hotspot hotspot-pancreas" data-organ="pancrees" aria-label="Selecciona el pàncrees"></button>
+            <button class="hotspot hotspot-small-intestine" data-organ="intesti-prim" aria-label="Selecciona l’intestí prim"></button>
+            <button class="hotspot hotspot-large-intestine" data-organ="intesti-gros" aria-label="Selecciona l’intestí gros"></button>
+            <button class="hotspot hotspot-appendix" data-organ="apendix" aria-label="Selecciona l’apèndix"></button>
+            <button class="hotspot hotspot-rectum" data-organ="recte" aria-label="Selecciona el recte"></button>
+            <button class="hotspot hotspot-anus" data-organ="anus" aria-label="Selecciona l’anus"></button>
+          </div>
+        </div>
+
+        <aside class="info-panel" id="infoPanel" aria-live="polite">
+          <div class="info-panel-topline"><span class="status-dot"></span><span id="panelStatus">Exploració guiada</span></div>
+          <div id="panelContent" class="panel-content">
+            <p class="panel-kicker">SISTEMA DIGESTIU</p>
+            <h2>Tria una part del dibuix</h2>
+            <p>Quan seleccionis un òrgan, aquí hi trobaràs el seu nom, una descripció i la seva funció principal.</p>
+          </div>
+        </aside>
+      </section>
+
+      <footer class="app-footer">
+        <span>3r d’ESO · Biologia i geologia</span>
+        <span>Versió inicial</span>
+      </footer>
+    </main>
+    <script src="app.js?v=quiz6" defer></script>
+  </body>
+</html>
